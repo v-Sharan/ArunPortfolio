@@ -16,8 +16,8 @@ app.use("/data", AcademicsRoute);
 
 const startServer = () => {
   try {
-    app.listen(8080, () => {
-      console.log("http://localhost:8080");
+    app.listen(5050, () => {
+      console.log("http://localhost:5050");
     });
   } catch (error) {
     console.log(error);
