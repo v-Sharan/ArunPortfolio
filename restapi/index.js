@@ -11,6 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("Portfolio api");
 });

@@ -4,12 +4,21 @@ import axios from "axios";
 function App() {
   useEffect(() => {
     axios
-      .get("http://localhost:8080/data/subject_handled")
+      .get("http://localhost:5050/data/academics")
       .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err.response.data));
+
+    console.log("hi");
   }, []);
 
-  return <h1 className="text-xl">Hi</h1>;
+  const clickHandler = () => {
+    axios
+      .get("http://localhost:5050/data/academics")
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err.response));
+  };
+
+  return <button onClick={clickHandler}>Request</button>;
 }
 
 export default App;
