@@ -3,7 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import * as dotenv from "dotenv";
 
-import AcademicsRoute from "./routes/route.js";
+import Routes from "./routes/route.js";
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
   res.send("Portfolio api");
 });
 
-app.use("/data", AcademicsRoute);
+app.use("/data", Routes);
 
 app.listen(5050, () => {
   console.log("http://localhost:5050");
