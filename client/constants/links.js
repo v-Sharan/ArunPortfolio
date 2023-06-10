@@ -1,102 +1,124 @@
-import React from "react";
-import {
-  AiOutlineCalendar,
-  AiOutlineShoppingCart,
-  AiOutlineAreaChart,
-  AiOutlineBarChart,
-  AiOutlineStock,
-} from "react-icons/ai";
-import { FiShoppingBag, FiEdit, FiPieChart } from "react-icons/fi";
-import { BsKanban, BsBarChart } from "react-icons/bs";
-import { BiColorFill } from "react-icons/bi";
-import { IoMdContacts } from "react-icons/io";
-import { RiContactsLine, RiStockLine } from "react-icons/ri";
-import { GiLouvrePyramid } from "react-icons/gi";
+import { AiOutlineHome } from "react-icons/ai";
+import { HiOutlineAcademicCap } from "react-icons/hi";
 
 export const links = [
   {
-    title: "Dashboard",
+    title: "Profile",
     links: [
       {
-        name: "ecommerce",
-        icon: FiShoppingBag,
-      },
-    ],
-  },
-
-  {
-    title: "Pages",
-    links: [
-      {
-        name: "orders",
-        icon: AiOutlineShoppingCart,
+        name: "Home",
+        icon: AiOutlineHome,
+        link: "/",
       },
       {
-        name: "employees",
-        icon: IoMdContacts,
+        name: "Academics And Experience",
+        icon: HiOutlineAcademicCap,
+        link: "/academics",
       },
       {
-        name: "customers",
-        icon: RiContactsLine,
-      },
-    ],
-  },
-  {
-    title: "Apps",
-    links: [
-      {
-        name: "calendar",
-        icon: AiOutlineCalendar,
+        name: "Grand Received",
+        icon: HiOutlineAcademicCap,
+        link: "/experience",
       },
       {
-        name: "kanban",
-        icon: BsKanban,
-      },
-      {
-        name: "editor",
-        icon: FiEdit,
-      },
-      {
-        name: "color-picker",
-        icon: BiColorFill,
+        name: "About",
+        icon: HiOutlineAcademicCap,
+        link: "/about",
       },
     ],
   },
   {
-    title: "Charts",
+    title: "Projects",
     links: [
       {
-        name: "line",
-        icon: AiOutlineStock,
+        name: "Consultancy And Patent Filling Projects",
+        icon: HiOutlineAcademicCap,
+        link: "/consultancy",
+      },
+    ],
+  },
+  {
+    title: "Awards",
+    links: [
+      {
+        name: "Awards and Responsibilities",
+        icon: HiOutlineAcademicCap,
+        link: "/awards",
+      },
+    ],
+  },
+  {
+    title: "Research",
+    links: [
+      {
+        name: "Research Guidance",
+        icon: HiOutlineAcademicCap,
+        link: "/research",
+      },
+    ],
+  },
+  {
+    title: "Technical paper",
+    links: [
+      {
+        name: " conferences & Journal",
+        icon: HiOutlineAcademicCap,
+        link: "/iconference",
       },
       {
-        name: "area",
-        icon: AiOutlineAreaChart,
-      },
-
-      {
-        name: "bar",
-        icon: AiOutlineBarChart,
+        name: "Guest of Honour",
+        icon: HiOutlineAcademicCap,
+        link: "/ijournal",
       },
       {
-        name: "pie",
-        icon: FiPieChart,
+        name: "Guest Lectures delivered",
+        icon: HiOutlineAcademicCap,
+        link: "/ijournal",
+      },
+    ],
+  },
+  {
+    title: "FDP & Workshops Attended",
+    links: [
+      {
+        name: "Workshops Addended",
+        icon: HiOutlineAcademicCap,
+        link: "/nconference",
       },
       {
-        name: "financial",
-        icon: RiStockLine,
+        name: "Organizing Workshops",
+        icon: HiOutlineAcademicCap,
+        link: "/nconference",
+      },
+    ],
+  },
+  {
+    title: "National Events",
+    links: [
+      {
+        name: "Conference",
+        icon: HiOutlineAcademicCap,
+        link: "/nconference",
       },
       {
-        name: "color-mapping",
-        icon: BsBarChart,
+        name: "Journal",
+        icon: HiOutlineAcademicCap,
+        link: "/njournal",
+      },
+    ],
+  },
+  {
+    title: "International Events",
+    links: [
+      {
+        name: "Conference",
+        icon: HiOutlineAcademicCap,
+        link: "/iconference",
       },
       {
-        name: "pyramid",
-        icon: GiLouvrePyramid,
-      },
-      {
-        name: "stacked",
-        icon: AiOutlineBarChart,
+        name: "Journal",
+        icon: HiOutlineAcademicCap,
+        link: "/ijournal",
       },
     ],
   },

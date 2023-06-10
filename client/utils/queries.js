@@ -7,6 +7,7 @@ export const Experience = () => {
   const query = '*[_type == "professional_experience"]';
   return query;
 };
+
 export const GrantReceived = () => {
   const query = '*[_type == "grant_received"]';
   return query;
