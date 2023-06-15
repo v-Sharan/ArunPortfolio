@@ -18,12 +18,7 @@ export const links = [
       {
         name: "Grand Received",
         icon: HiOutlineAcademicCap,
-        link: "/experience",
-      },
-      {
-        name: "About",
-        icon: HiOutlineAcademicCap,
-        link: "/about",
+        link: "/grand",
       },
     ],
   },
@@ -63,17 +58,17 @@ export const links = [
       {
         name: " conferences & Journal",
         icon: HiOutlineAcademicCap,
-        link: "/iconference",
+        link: "/technical",
       },
       {
         name: "Guest of Honour",
         icon: HiOutlineAcademicCap,
-        link: "/ijournal",
+        link: "/honour",
       },
       {
         name: "Guest Lectures delivered",
         icon: HiOutlineAcademicCap,
-        link: "/ijournal",
+        link: "/lectures",
       },
     ],
   },
@@ -83,12 +78,12 @@ export const links = [
       {
         name: "Workshops Addended",
         icon: HiOutlineAcademicCap,
-        link: "/nconference",
+        link: "/workshop",
       },
       {
         name: "Organizing Workshops",
         icon: HiOutlineAcademicCap,
-        link: "/nconference",
+        link: "/organized",
       },
     ],
   },

@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.4",
     "@sanity/client": "^6.1.2",
     "framer-motion": "^10.12.16",
     "react": "^18.2.0",

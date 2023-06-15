@@ -33,7 +33,7 @@ const Sidebar = () => {
                 className="w-[30%] h-[20%] dark:bg-white dark:hover:shadow-md dark:hover:shadow-teal-100 rounded-full border hover:shadow-lg"
                 src="/photo-rbg.png"
               />
-              <span>Arun</span>
+              <span>Dr.C.Arun</span>
             </Link>
             <div className="tooltip tooltip-bottom" data-tip="Close">
               <button

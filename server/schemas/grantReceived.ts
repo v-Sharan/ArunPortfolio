@@ -18,19 +18,7 @@ export const GrantReceived = defineType({
     defineField({
       name: 'duration',
       title: 'Duration',
-      type: 'array',
-      of: [
-        {
-          name: 'from',
-          title: 'from',
-          type: 'string',
-        },
-        {
-          name: 'to',
-          title: 'to',
-          type: 'string',
-        },
-      ],
+      type: 'string',
     }),
     defineField({
       name: 'amount',
