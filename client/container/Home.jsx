@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Table } from "../components";
 import { PublicationSummaryColumns } from "../constants";
+import { useQuery } from "react-query";
+import { client } from "../utils/client";
+import { SubjectHandled } from "../utils/queries";
+import { CircularProgress } from "@mui/material";
 
 const rows = [
   { indexing: "WOS", articals: 49, citations: 152, h_index: 7 },
@@ -9,7 +13,33 @@ const rows = [
   { indexing: "Google Scholar", articals: 179, citations: 842, h_index: 16 },
 ];
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const items = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const Home = () => {
+  const { data, isLoading } = useQuery("Subjects", () =>
+    client.fetch(SubjectHandled())
+  );
+
+  console.log(data);
+
   return (
     <motion.div
       className="min-h-screen"
@@ -99,6 +129,58 @@ const Home = () => {
           columns={PublicationSummaryColumns}
           title={"Journal Publication Summary"}
         />
+      </motion.div>
+      <motion.div
+        variants={{
+          visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+              delayChildren: 0.7,
+              staggerChildren: 0.5,
+            },
+          },
+        }}
+      >
+        <div className="pl-10 text-3xl mt-8 font-bold">Subject Handling</div>
+        <div className="flex flex-col items-center justify-center">
+          {isLoading && <CircularProgress />}
+          <div className="text-3xl font-bold">PG Subjects</div>
+          {data?.map((item) => (
+            <motion.ol
+              key={`${item._id}`}
+              variants={container}
+              initial="hidden"
+              animate="visible"
+              className="tracking-wider p-10 text-lg list-decimal ml-20"
+            >
+              {item.pg_subject?.map((journal, i) => (
+                <motion.li key={`${i}`} variants={items}>
+                  {journal}
+                </motion.li>
+              ))}
+            </motion.ol>
+          ))}
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          {isLoading && <CircularProgress />}
+          <div className="text-3xl font-bold">UG Subjects</div>
+          {data?.map((item) => (
+            <motion.ol
+              key={`${item._id}`}
+              variants={container}
+              initial="hidden"
+              animate="visible"
+              className="tracking-wider p-10 text-lg list-decimal ml-20"
+            >
+              {item.ug_subject?.map((journal, i) => (
+                <li key={`${i}`} variants={items}>
+                  {journal}
+                </li>
+              ))}
+            </motion.ol>
+          ))}
+        </div>
       </motion.div>
     </motion.div>
   );

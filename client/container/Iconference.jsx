@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { client } from "../utils/client";
-import { InternationalJournal } from "../utils/queries";
+import { InternationalConference } from "../utils/queries";
 import { motion } from "framer-motion";
 import { CircularProgress } from "@mui/material";
 
@@ -25,16 +25,18 @@ const items = {
   },
 };
 
-const Ijournal = () => {
-  const { data, isLoading } = useQuery("InternationalJournal", () =>
-    client.fetch(InternationalJournal())
+const Iconference = () => {
+  const { data, isLoading } = useQuery("InternationalConference", () =>
+    client.fetch(InternationalConference())
   );
 
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">International Journal</div>
+      <div className="p-5 text-3xl mt-8 font-bold">
+        International Conference
+      </div>
       <div className="flex flex-col items-center justify-center">
-      {isLoading && <CircularProgress />}
+        {isLoading && <CircularProgress />}
         <motion.ol
           variants={container}
           initial="hidden"
@@ -42,9 +44,9 @@ const Ijournal = () => {
           className="tracking-wider p-10 text-lg list-decimal ml-20"
         >
           {data?.map((item) => (
-            <li key={`${item._id}`} variants={items}>
+            <motion.li key={`${item._id}`} variants={items}>
               {item.description}
-            </li>
+            </motion.li>
           ))}
         </motion.ol>
       </div>
@@ -52,4 +54,4 @@ const Ijournal = () => {
   );
 };
 
-export default Ijournal;
+export default Iconference;

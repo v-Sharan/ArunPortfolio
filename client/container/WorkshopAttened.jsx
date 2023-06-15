@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { client } from "../utils/client";
-import { InternationalJournal } from "../utils/queries";
+import { WorkShop } from "../utils/queries";
 import { motion } from "framer-motion";
 import { CircularProgress } from "@mui/material";
 
@@ -25,16 +25,15 @@ const items = {
   },
 };
 
-const Ijournal = () => {
-  const { data, isLoading } = useQuery("InternationalJournal", () =>
-    client.fetch(InternationalJournal())
+const WorkshopAttened = () => {
+  const { data, isLoading } = useQuery("WorkShop", () =>
+    client.fetch(WorkShop())
   );
-
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">International Journal</div>
+      <div className="p-5 text-3xl mt-8 font-bold">WorkShop Attened</div>
       <div className="flex flex-col items-center justify-center">
-      {isLoading && <CircularProgress />}
+        {isLoading && <CircularProgress />}
         <motion.ol
           variants={container}
           initial="hidden"
@@ -52,4 +51,4 @@ const Ijournal = () => {
   );
 };
 
-export default Ijournal;
+export default WorkshopAttened;

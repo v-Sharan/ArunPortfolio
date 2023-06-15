@@ -49,9 +49,9 @@ const Award = () => {
             className="tracking-wider p-10 text-lg list-decimal ml-20"
           >
             {item.award.map((arr, index) => (
-              <li key={index} variants={items}>
+              <motion.li key={index} variants={items}>
                 {arr}
-              </li>
+              </motion.li>
             ))}
           </motion.ol>
         ))}

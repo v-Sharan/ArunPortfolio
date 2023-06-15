@@ -11,6 +11,15 @@ import {
   Awards,
   Research,
   Ijournal,
+  Iconference,
+  Nconference,
+  Technical,
+  Njournal,
+  Ghonour,
+  Glecture,
+  WorkshopAttened,
+  WorkshopOrganized,
+  About,
 } from "../container";
 
 import "./App.css";
@@ -55,6 +64,15 @@ const App = () => {
             <Route path="/awards" element={<Awards />} />
             <Route path="/research" element={<Research />} />
             <Route path="/ijournal" element={<Ijournal />} />
+            <Route path="/iconference" element={<Iconference />} />
+            <Route path="/nconference" element={<Nconference />} />
+            <Route path="/njournal" element={<Njournal />} />
+            <Route path="/technical" element={<Technical />} />
+            <Route path="/honour" element={<Ghonour />} />
+            <Route path="/lectures" element={<Glecture />} />
+            <Route path="/workshop" element={<WorkshopAttened />} />
+            <Route path="/organized" element={<WorkshopOrganized />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
         <Footer />

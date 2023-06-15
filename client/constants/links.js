@@ -20,6 +20,11 @@ export const links = [
         icon: HiOutlineAcademicCap,
         link: "/grand",
       },
+      {
+        name: "About",
+        icon: HiOutlineAcademicCap,
+        link: "/about",
+      },
     ],
   },
   {
