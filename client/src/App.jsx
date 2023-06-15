@@ -23,16 +23,11 @@ import {
 } from "../container";
 
 import "./App.css";
-import mailgo from "mailgo";
 
 import { useStateContext } from "../contexts/ContextProvider";
 
 const App = () => {
   const { activeMenu } = useStateContext();
-
-  useEffect(() => {
-    mailgo();
-  });
 
   return (
     <div className="flex dark:bg-main-dark-bg">
