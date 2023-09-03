@@ -31,8 +31,10 @@ const WorkshopAttened = () => {
   );
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">WorkShop Attened</div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">
+        WorkShop Attened
+      </div>
+      <div className="flex flex-col items-center justify-center dark:text-white">
         {isLoading && <CircularProgress />}
         <motion.ol
           variants={container}
@@ -41,9 +43,9 @@ const WorkshopAttened = () => {
           className="tracking-wider p-10 text-lg list-decimal ml-20"
         >
           {data?.map((item) => (
-            <li key={`${item._id}`} variants={items}>
+            <motion.li key={`${item._id}`} variants={items}>
               {item.description}
-            </li>
+            </motion.li>
           ))}
         </motion.ol>
       </div>

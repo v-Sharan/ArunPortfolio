@@ -32,18 +32,21 @@ const WorkshopOrganized = () => {
 
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">Work shop organizing</div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">
+        Work shop organizing
+      </div>
+      <div className="flex flex-col items-center justify-center dark:text-white">
         {isLoading && <CircularProgress />}
-        {data?.map((item) => (
+        {data?.map((item, i) => (
           <motion.ol
+            key={i}
             variants={container}
             initial="hidden"
             animate="visible"
             className="tracking-wider p-10 text-lg list-decimal ml-20"
           >
-            {item.organizing_conference?.map((journal) => (
-              <motion.li key={`${item._id}`} variants={items}>
+            {item.organizing_conference?.map((journal, i) => (
+              <motion.li key={i} variants={items}>
                 {journal}
               </motion.li>
             ))}

@@ -31,7 +31,7 @@ const items = {
 
 const About = () => {
   return (
-    <div className=" flex items-center justify-center w-full md:w-[90%] sm:w-[55%] overflow-hidden flex-col mt-10">
+    <div className=" flex items-center justify-center w-full md:w-[90%] sm:w-[55%] overflow-hidden flex-col mt-10 dark:text-white">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -88,12 +88,13 @@ const About = () => {
           variants={container}
           initial="hidden"
           animate="visible"
-          className="tracking-wider pl-40 pt-10 w-[80%] text-lg list-decimal ml-20"
+          className="tracking-wider pl-40 pt-10 w-full text-lg list-decimal"
         >
           Principal Investigator : Mr.C.Arun,
           <br /> Funding agency : DST
           <br /> Proposed expenditure : Rs. 12 lakhs <br />
           Title: Design and Implementation of a Hard Output Viterbi Algorithm
+          <br />
           (HOVA) for use in a Concatenated Source Coding Scheme.
         </motion.div>
       </motion.div>

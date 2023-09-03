@@ -24,7 +24,6 @@ const items = {
     opacity: 1,
   },
 };
-
 const Ghonour = () => {
   const { data, isLoading } = useQuery("GuestLectures", () =>
     client.fetch(GuestLectures())
@@ -32,8 +31,10 @@ const Ghonour = () => {
 
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">GuestLectures</div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">
+        GuestLectures
+      </div>
+      <div className="flex flex-col items-center justify-center dark:text-white">
         {isLoading && <CircularProgress />}
         {data?.map((item) => (
           <motion.ol
@@ -44,9 +45,9 @@ const Ghonour = () => {
             className="tracking-wider p-10 text-lg list-decimal ml-20"
           >
             {item.description?.map((journal, i) => (
-              <li key={`${i}`} variants={items}>
+              <motion.li key={i} variants={items}>
                 {journal}
-              </li>
+              </motion.li>
             ))}
           </motion.ol>
         ))}

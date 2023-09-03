@@ -5,15 +5,13 @@ import { useQuery } from "react-query";
 import { motion } from "framer-motion";
 
 const Award = () => {
-  const { data: awards, isLoading:awardIsLoading } = useQuery("Awards", () =>
+  const { data: awards, isLoading: awardIsLoading } = useQuery("Awards", () =>
     client.fetch(Awards())
   );
   const { data: responsible, isLoading: responsibleIsLoading } = useQuery(
     "responsible",
     () => client.fetch(AdminstrativeResponsibility())
   );
-
-  console.log(responsible)
 
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -36,10 +34,10 @@ const Award = () => {
   };
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">
         Awards and Merits Received
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center dark:text-white">
         {awards?.map((item, index) => (
           <motion.ol
             variants={container}
@@ -59,10 +57,10 @@ const Award = () => {
       {awardIsLoading && (
         <span className="loading loading-spinner text-primary"></span>
       )}
-      <div className="p-5 text-3xl mt-8 font-bold">
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">
         Administrative Responsibilities
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center dark:text-white">
         {responsible?.map((item, index) => (
           <motion.ol
             variants={container}
@@ -72,14 +70,14 @@ const Award = () => {
             className="tracking-wider p-10 text-lg list-decimal ml-20"
           >
             {item.adminstrative_responsibility.map((arr, index) => (
-              <li key={index} variants={items}>
+              <motion.li key={index} variants={items}>
                 {arr}
-              </li>
+              </motion.li>
             ))}
           </motion.ol>
         ))}
       </div>
-      {awardIsLoading && (
+      {responsibleIsLoading && (
         <span className="loading loading-spinner text-primary"></span>
       )}
     </React.Fragment>

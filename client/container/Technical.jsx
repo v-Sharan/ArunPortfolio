@@ -29,11 +29,10 @@ const Technical = () => {
   const { data, isLoading } = useQuery("TechnicalPaperReviewer", () =>
     client.fetch(TechnicalPaperReviewer())
   );
-  console.log(data);
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">National Journal</div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">National Journal</div>
+      <div className="flex flex-col items-center justify-center dark:text-white">
       {isLoading && <CircularProgress />}
         {data?.map((item) => (
           <motion.ol

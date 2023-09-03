@@ -32,10 +32,10 @@ const Iconference = () => {
 
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">
         International Conference
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center dark:text-white">
         {isLoading && <CircularProgress />}
         <motion.ol
           variants={container}

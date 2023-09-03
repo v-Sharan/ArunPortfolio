@@ -15,8 +15,6 @@ const Grand = () => {
     client.fetch(GrantReceived())
   );
 
-  console.log(data);
-
   return (
     <motion.div
       className="w-[90%] h-[60%] flex flex-col justify-center items-center rounded"

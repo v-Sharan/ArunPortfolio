@@ -21,17 +21,9 @@ const Project = () => {
 
   return (
     <motion.div
-      variants={{
-        visible: {
-          opacity: 1,
-          scale: 1,
-          transition: {
-            delayChildren: 0.7,
-            staggerChildren: 0.5,
-          },
-        },
-      }}
-      className="flex justify-center flex-col items-center"
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+      className="w-[90%] h-[60%] flex flex-coljustify-center flex-col items-center"
     >
       <Table
         columns={consconsultancyCloumns}

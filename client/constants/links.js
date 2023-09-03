@@ -1,5 +1,12 @@
-import { AiOutlineHome } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { HiOutlineAcademicCap } from "react-icons/hi";
+import { GiVideoConference, GiReceiveMoney } from "react-icons/gi";
+import { BsAward, BsJournalCheck, BsPersonWorkspace } from "react-icons/bs";
+import { SiAboutdotme } from "react-icons/si";
+import { RiHonourLine } from "react-icons/ri";
+import { TbListSearch } from "react-icons/tb";
+import { GrWorkshop } from "react-icons/gr";
+import { VscOrganization } from "react-icons/vsc";
 
 export const links = [
   {
@@ -17,12 +24,12 @@ export const links = [
       },
       {
         name: "Grand Received",
-        icon: HiOutlineAcademicCap,
+        icon: GiReceiveMoney,
         link: "/grand",
       },
       {
         name: "About",
-        icon: HiOutlineAcademicCap,
+        icon: SiAboutdotme,
         link: "/about",
       },
     ],
@@ -32,7 +39,7 @@ export const links = [
     links: [
       {
         name: "Consultancy And Patent Filling Projects",
-        icon: HiOutlineAcademicCap,
+        icon: AiOutlineProject,
         link: "/consultancy",
       },
     ],
@@ -42,7 +49,7 @@ export const links = [
     links: [
       {
         name: "Awards and Responsibilities",
-        icon: HiOutlineAcademicCap,
+        icon: BsAward,
         link: "/awards",
       },
     ],
@@ -52,7 +59,7 @@ export const links = [
     links: [
       {
         name: "Research Guidance",
-        icon: HiOutlineAcademicCap,
+        icon: TbListSearch,
         link: "/research",
       },
     ],
@@ -62,17 +69,17 @@ export const links = [
     links: [
       {
         name: " conferences & Journal",
-        icon: HiOutlineAcademicCap,
+        icon: GiVideoConference,
         link: "/technical",
       },
       {
         name: "Guest of Honour",
-        icon: HiOutlineAcademicCap,
+        icon: RiHonourLine,
         link: "/honour",
       },
       {
         name: "Guest Lectures delivered",
-        icon: HiOutlineAcademicCap,
+        icon: GrWorkshop,
         link: "/lectures",
       },
     ],
@@ -81,13 +88,13 @@ export const links = [
     title: "FDP & Workshops Attended",
     links: [
       {
-        name: "Workshops Addended",
-        icon: HiOutlineAcademicCap,
+        name: "Workshops Attended",
+        icon: BsPersonWorkspace,
         link: "/workshop",
       },
       {
         name: "Organizing Workshops",
-        icon: HiOutlineAcademicCap,
+        icon: VscOrganization,
         link: "/organized",
       },
     ],
@@ -97,12 +104,12 @@ export const links = [
     links: [
       {
         name: "Conference",
-        icon: HiOutlineAcademicCap,
+        icon: GiVideoConference,
         link: "/nconference",
       },
       {
         name: "Journal",
-        icon: HiOutlineAcademicCap,
+        icon: BsJournalCheck,
         link: "/njournal",
       },
     ],
@@ -112,12 +119,12 @@ export const links = [
     links: [
       {
         name: "Conference",
-        icon: HiOutlineAcademicCap,
+        icon: GiVideoConference,
         link: "/iconference",
       },
       {
         name: "Journal",
-        icon: HiOutlineAcademicCap,
+        icon: BsJournalCheck,
         link: "/ijournal",
       },
     ],

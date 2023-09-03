@@ -4,10 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const NavButton = ({ title, customFunc, icon }) => (
-  <div
-    data-tip={title}
-    className="tooltip tooltip-bottom"
-  >
+  <div data-tip={title} className="tooltip tooltip-bottom">
     <button
       type="button"
       onClick={() => customFunc()}
@@ -43,7 +40,7 @@ const Navbar = () => {
   const handleActiveMenu = () => setActiveMenu(!activeMenu);
 
   return (
-    <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
+    <div className="flex justify-between  p-2 md:ml-6 md:mr-6 relative">
       <NavButton
         title="Menu"
         customFunc={handleActiveMenu}

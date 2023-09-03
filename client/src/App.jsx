@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { Navbar, Sidebar, Footer } from "../components";
@@ -31,6 +31,9 @@ const App = () => {
 
   return (
     <div className="flex dark:bg-main-dark-bg">
+      <div className="main">
+        <div className="gradient" />
+      </div>
       {activeMenu ? (
         <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
           <Sidebar />

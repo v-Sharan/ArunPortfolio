@@ -38,15 +38,13 @@ const Home = () => {
     client.fetch(SubjectHandled())
   );
 
-  console.log(data);
-
   return (
     <motion.div
       className="min-h-screen"
       whileInView={{ x: [-100, 10], opacity: [1, 1] }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 1 }}
     >
-      <div className=" flex items-center justify-center w-full md:w-[90%] sm:w-[55%] overflow-hidden flex-col mt-10">
+      <div className=" flex items-center justify-center w-full md:w-[90%]  overflow-hidden flex-col mt-10">
         <div className="flex p-6 justify-between h-[90%] bg-white rounded-lg shadow-2xl w-[70%] mb-10">
           <div className="text-gray-950">
             <h1>Dr.C.Arun</h1>
@@ -78,8 +76,8 @@ const Home = () => {
             </div>
           </div>
           <motion.img
-            whileInView={{ scale: [0, 1] }}
-            transition={{ duration: 0.2, ease: "backInOut" }}
+            whileInView={{ scale: [0.5, 1] }}
+            transition={{ duration: 0.5, ease: "backInOut" }}
             src="/photo-rbg.png"
             alt="image"
             className="w-18 h-16 md:h-48 md:w-48 rounded-full bg-red-700 flex flex-end object-contain"
@@ -103,11 +101,9 @@ const Home = () => {
         >
           <h1 className="text-5xl font-bold dark:text-white">Objective</h1>
           <div className="py-6 dark:text-gray-300">
-            <div className="">
-              Zeal to attain a distinct position in the field of Engineering and
-              Technology, through dedication and devotion, capable of achieving
-              the goals of an esteemed organization.
-            </div>
+            Zeal to attain a distinct position in the field of Engineering and
+            Technology, through dedication and devotion, capable of achieving
+            the goals of an esteemed organization.
           </div>
         </motion.div>
       </div>
@@ -122,7 +118,7 @@ const Home = () => {
             },
           },
         }}
-        className="flex justify-center items-center w-[90%]"
+        className="flex justify-center items-center"
       >
         <Table
           row={rows}
@@ -142,8 +138,10 @@ const Home = () => {
           },
         }}
       >
-        <div className="pl-10 text-3xl mt-8 font-bold">Subject Handling</div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="pl-10 text-3xl mt-8 mb-5 font-bold dark:text-white">
+          Subject Handling
+        </div>
+        <div className="flex flex-col items-center justify-center dark:text-white">
           {isLoading && <CircularProgress />}
           <div className="text-3xl font-bold">PG Subjects</div>
           {data?.map((item) => (
@@ -162,7 +160,7 @@ const Home = () => {
             </motion.ol>
           ))}
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center dark:text-white">
           {isLoading && <CircularProgress />}
           <div className="text-3xl font-bold">UG Subjects</div>
           {data?.map((item) => (
@@ -174,9 +172,9 @@ const Home = () => {
               className="tracking-wider p-10 text-lg list-decimal ml-20"
             >
               {item.ug_subject?.map((journal, i) => (
-                <li key={`${i}`} variants={items}>
+                <motion.li key={`${i}`} variants={items}>
                   {journal}
-                </li>
+                </motion.li>
               ))}
             </motion.ol>
           ))}

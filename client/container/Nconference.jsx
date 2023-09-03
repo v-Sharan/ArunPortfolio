@@ -32,8 +32,8 @@ const Nconference = () => {
 
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">National Conference</div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">National Conference</div>
+      <div className="flex flex-col items-center justify-center dark:text-white">
       {isLoading && <CircularProgress />}
         <motion.ol
           variants={container}

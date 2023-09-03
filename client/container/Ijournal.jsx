@@ -32,9 +32,11 @@ const Ijournal = () => {
 
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">International Journal</div>
-      <div className="flex flex-col items-center justify-center">
-      {isLoading && <CircularProgress />}
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">
+        International Journal
+      </div>
+      <div className="flex flex-col items-center justify-center dark:text-white">
+        {isLoading && <CircularProgress />}
         <motion.ol
           variants={container}
           initial="hidden"
@@ -42,9 +44,9 @@ const Ijournal = () => {
           className="tracking-wider p-10 text-lg list-decimal ml-20"
         >
           {data?.map((item) => (
-            <li key={`${item._id}`} variants={items}>
+            <motion.li key={`${item._id}`} variants={items}>
               {item.description}
-            </li>
+            </motion.li>
           ))}
         </motion.ol>
       </div>

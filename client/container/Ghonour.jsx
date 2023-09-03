@@ -32,8 +32,8 @@ const Ghonour = () => {
 
   return (
     <React.Fragment>
-      <div className="p-5 text-3xl mt-8 font-bold">Guest Of Honour</div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="p-5 text-3xl mt-8 font-bold dark:text-white">Guest Of Honour</div>
+      <div className="flex flex-col items-center justify-center dark:text-white">
         {isLoading && <CircularProgress />}
         {data?.map((item) => (
           <motion.ol
