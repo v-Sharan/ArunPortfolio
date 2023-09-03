@@ -40,7 +40,7 @@ export const PublicationSummaryColumns = [
   },
   {
     id: "articals",
-    label: "No of Articals",
+    label: "No of Articles",
     minWidth: 100,
   },
   {

@@ -67,7 +67,7 @@ const Home = () => {
               Address:
               <br />
               16/29, 1st Floor, F2-Block,
-              <br className="sm:block" /> Alpha Poppy Apartment, Avvai Nager
+              <br className="sm:block" /> Alpha Poppy Apartment, Avvai Nagar
               West Street
               <br className="sm:block" />
               Choolaimedu-94, Chennai,

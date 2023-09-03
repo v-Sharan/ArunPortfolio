@@ -24,7 +24,7 @@ const Footer = () => {
           className="link link-hover"
           href="https://scholar.google.com/citations?user=C8lRd-UAAAAJ&hl=en&authuser=2"
         >
-          Google Scholer
+          Google Scholar
         </a>
       </div>
       <div>
